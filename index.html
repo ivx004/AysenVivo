@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aysén Vivo - Experiencias Turísticas Sostenibles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Aysén Vivo</h1>
+            <p>Plataforma de Experiencias Turísticas Sostenibles en la Patagonia Chilena</p>
+        </div>
+    </header>
+
+    <nav class="filters">
+        <button class="filter-btn active" data-category="todos">Todos</button>
+        <button class="filter-btn" data-category="pesca">Pesca</button>
+        <button class="filter-btn" data-category="trekking">Trekking</button>
+        <button class="filter-btn" data-category="navegacion">Navegación</button>
+        <button class="filter-btn" data-category="cultura">Cultura</button>
+    </nav>
+
+    <main>
+        <section id="experiencias" class="experiencias-grid">
+            <!-- Tarjetas generadas por JS -->
+        </section>
+
+        <section class="reserva">
+            <h2>Reserva tu Experiencia</h2>
+            <form id="reserva-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <span class="error" id="error-nombre"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error" id="error-email"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="experiencia">Experiencia</label>
+                    <select id="experiencia" name="experiencia" required>
+                        <!-- Llenado por JS -->
+                    </select>
+                    <span class="error" id="error-experiencia"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="personas">Número de Personas</label>
+                    <input type="number" id="personas" name="personas" min="1" required>
+                    <span class="error" id="error-personas"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                    <span class="error" id="error-fecha"></span>
+                </div>
+                
+                <button type="submit" class="btn-reserva">Reservar Ahora</button>
+            </form>
+            <div id="mensaje-reserva" class="mensaje"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Aysén Vivo - Turismo Sostenible en la Región de Aysén, Chile</p>
+        <p>Promoviendo experiencias de bajo impacto en Patagonia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
